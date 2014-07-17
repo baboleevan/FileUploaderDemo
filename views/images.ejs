@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/stylesheets/cover.css"/>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+</head>
+<body>
+
+<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <div class="cover-container">
+            <header class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">File API</h3>
+                </div>
+            </header>
+
+            <article class="inner cover">
+                <h1 class="cover-heading">Image Upload Example</h1>
+                <p class="lead">File API를 이용한 이미지 업로드 예제를 살펴봄으로써,<br/>사용 방식과 인터페이스를 이해해 봅시다.</p>
+                <div class="row">
+                    <ul id="media-list">
+
+                    </ul>
+                </div>
+                <p class="lead">
+                    <input id="ipt-file" type="file"accept="image/png,image/gif,image/jpeg" multiple>
+                    <a href="#" id="btn-upload" class="btn btn-lg btn-info">이미지 업로드</a>
+                    <a href="#" id="btn-search" class="btn btn-lg btn-default">이미지 선택</a>
+                </p>
+            </article>
+
+            <article class="console clearfix">
+            </article>
+
+            <footer class="mastfoot">
+                <div class="inner">
+                    <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+<div class="tab tab-a"></div>
+<div class="tab tab-b"></div>
+<div class="tab tab-c"></div>
+<script type="text/x-handlebars-template" id="media">
+    <li>
+        <div class="col-xs-6 col-md-3">
+            <a href="#" class="thumbnail" title="{{file-name}}" data-name="{{name}}">
+                <img src="{{data_url}}">
+            </a>
+        </div>
+    </li>
+</script>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/bower_components/handlebars/handlebars.min.js"></script>
+<script src="/javascripts/Uploader.js"></script>
+<script src="/javascripts/Images.js"></script>
+<script>
+    var uploader = new Uploader({path : 'public/images'}),
+        images = new Images(uploader);
+</script>
+</body>
+</html>
