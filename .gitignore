@@ -103,3 +103,7 @@ public/bower_components
 
 # Users Environment Variables
 .lock-wscript
+
+# upload directory
+public/logs
+public/images

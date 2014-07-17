@@ -1,14 +1,14 @@
 {
-  "name": "application-name",
+  "name": "FileUploader",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
+    "express": "^4.6.1",
     "body-parser": "^1.4.3",
     "ejs": "*",
-    "express": "^4.6.1",
     "formidable": "^1.0.15"
   },
   "devDependencies": {
